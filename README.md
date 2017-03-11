@@ -7,7 +7,7 @@
 
 ``` bash
 $ cd hexo目录
-$ git clone https://github.com/EZLippi/hexo-theme hexo目录/themes/
+$ git clone https://github.com/EZLippi/hexo-theme themes/
 ```
 
 ### 应用Hexo主题
