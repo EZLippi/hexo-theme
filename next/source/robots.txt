@@ -1,0 +1,7 @@
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-Agent: Baiduspider
+Disallow:
+
+User-agent: *
+Disallow: 
+Sitemap: http://www.ezlippi.com/sitemap.xml

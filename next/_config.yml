@@ -94,13 +94,13 @@ font:
   global:
     # external: true will load this font family from host.
     external: true
-    family: Neucha
+    family: Monda
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6)
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: Roboto Slab
 
   # Font settings for posts
   # Fallback to `global` font settings.
@@ -113,13 +113,13 @@ font:
   # The `size` option use `px` as unit
   logo:
     external: true
-    family:
-    size:
+    family: Lobster Two
+    size: 24
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: PT Mono
     size:
 
 
@@ -234,6 +234,12 @@ post_meta:
   updated_at: false
   categories: true
 
+# Post wordcount display settings
+# Dependencies: https://github.com/willin/hexo-wordcount
+post_wordcount:
+  item_text: true
+  wordcount: true
+  min2read: true
 
 # Wechat Subscriber
 #wechat_subscriber:
@@ -289,11 +295,12 @@ baidu_analytics: 340874ba9357cbe81570aa4ac1185941
 
 # Duoshuo ShortName
 #duoshuo_shortname:
-duoshuo_shortname: ezlippi 
-# Disqus
-#disqus_shortname:
+#duoshuo_shortname: ezlippi 
+#Disqus
+#disqus_shortname: lippi
+livere_uid: MTAyMC8zMjI4My84ODQ3
 
-# Hypercomments
+#Hypercomments
 #hypercomments_id:
 
 # Gentie productKey
@@ -316,8 +323,8 @@ duoshuo_shortname: ezlippi
 #add_this_id:
 
 # Share
-duoshuo_share: true
-duoshuo_hotartical: true
+#duoshuo_share: true
+#duoshuo_hotartical: true
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
 #google_site_verification:
@@ -336,10 +343,10 @@ duoshuo_hotartical: true
 # Make duoshuo show UA
 # user_id must NOT be null when admin_enable is true!
 # you can visit http://dev.duoshuo.com get duoshuo user id.
-duoshuo_info:
-  ua_enable: true
-  admin_enable: false
-  user_id: 0
+#duoshuo_info:
+#  ua_enable: true
+#  admin_enable: false
+#  user_id: 0
   #admin_nickname: Author
 
 

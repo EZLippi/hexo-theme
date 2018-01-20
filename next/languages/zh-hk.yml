@@ -27,6 +27,8 @@ post:
   read_more: 閱讀全文
   untitled: 未命名
   toc_empty: 此文章未包含目錄
+  wordcount: 字数统计
+  min2read: 阅读时长
 
 page:
   totally: 共有
