@@ -159,18 +159,6 @@
                 </a>
               </span>
               <!--/noindex-->
-			{% elseif theme.livere_uid %}
-            <!--noindex-->
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count hc-comment-count" data-xid="{{ post.path }}" itemprop="commentsCount"></span>
-                </a>
-              </span>
-              <!--/noindex-->  
             {% elseif is_post() and theme.gentie_productKey %}
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
@@ -188,7 +176,8 @@
             <span class="post-meta-divider">|</span>
             <div class="fb-like" data-layout="button_count" data-share="true"></div>
           {% endif %}
-
+		  
+			 
           {# LeanCould PageView #}
           {% if theme.leancloud_visitors.enable %}
              <span id="{{ url_for(post.path) }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
@@ -200,9 +189,10 @@
                  <span class="post-meta-item-text">{{__('post.visitors')}} </span>
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
+				 <span>℃</span>
              </span>
           {% endif %}
-
+		   
           {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
             <span class="post-meta-divider">|</span>
             <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}
@@ -341,7 +331,36 @@
 
 
     <footer class="post-footer">
-         
+        {# 版权声明节点 #}
+     <div>    
+      {% if not is_index %}
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 {{ theme.author }} 的个人博客">{{ theme.author }}</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="{{ url_for(post.permalink) }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="{{ url_for(post.permalink) }}" title="{{ post.title }}">{{ post.permalink }}</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>{{ post.date.format("YYYY年M月D日 - HH时MM分") }}
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 {{theme.author}} 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+        </li>
+      </ul>
+    {% endif %}
+  </div>  
       {% if not is_index and (post.prev or post.next) %}
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">

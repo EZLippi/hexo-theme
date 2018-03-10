@@ -10,7 +10,9 @@
   {% include '_partials/head.swig' %}
   <title>{% block title %}{% endblock %}</title>
 </head>
-
+{% if theme.leancloud_visitors.enable %}
+  	 {% include '_scripts/lean-analytics.swig' %}
+  {%  endif %}
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ page.lang || page.language || config.language }}">
 
   {% include '_scripts/third-party/analytics.swig' %}
@@ -72,6 +74,8 @@
   {% include '_scripts/third-party/lean-analytics.swig' %}
   {% include '_scripts/baidu-push.swig' %}
   {% include '_components/algolia-search/assets.swig' %}
+	<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
 
 </body>
 </html>

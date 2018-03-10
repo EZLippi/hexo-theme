@@ -119,7 +119,7 @@ font:
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family: PT Mono
+    family: consolas
     size:
 
 
@@ -300,6 +300,7 @@ baidu_analytics: 340874ba9357cbe81570aa4ac1185941
 #disqus_shortname: lippi
 livere_uid: MTAyMC8zMjI4My84ODQ3
 
+
 #Hypercomments
 #hypercomments_id:
 
@@ -372,9 +373,9 @@ facebook_comments_plugin:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: kJ2sJuSJeByLioULSXrJ5CSq-9Nh9j0Va
+  app_key: uBWeNxCbFEWsOVDTmAInrDq3
 
 # Show PV/UV of the website/page with busuanzi.
 # Get more information on http://ibruce.info/2015/04/04/busuanzi/
